@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bkgr"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/hello"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingLeft="10dp"
+        android:text="@string/welcome"
+        android:textAlignment="textStart"
+        android:textColor="@color/PaleBlue"
+        android:textSize="20sp"
+        android:textStyle="italic|bold" />
+
+    <EditText
+        android:id="@+id/fill_name_pg1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10" >
+    </EditText>
+
+    <!-- Textview sätt i koden -->
+
+    <TextView
+        android:id="@+id/hej"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingLeft="10dp" />
+
+    <TextView
+        android:id="@+id/budget_pg1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingLeft="10dp"
+        android:text="@string/budget"
+        android:textAlignment="textStart"
+        android:textColor="@color/PaleBlue"
+        android:textSize="20sp"
+        android:textStyle="italic|bold" />
+
+    <EditText
+        android:id="@+id/fill_budget_pg1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_weight="1"
+        android:ems="10"
+        android:gravity="right"
+        android:text="kr" >
+    </EditText>
+
+    <Button
+        android:id="@+id/clearBud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Button" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnFran_pg1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/från" />
+
+        <Button
+            android:id="@+id/btnTill_pg1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/till" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/confirm_ok_pg1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/ok" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" >
+
+        <Button
+            android:id="@+id/outgoing_pg1"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Utgifter" />
+
+        <Button
+            android:id="@+id/incomes_pg1"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inkomst" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bkgr"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:paddingLeft="10dp"
+        android:text="@string/utgifter"
+        android:textAlignment="textStart"
+        android:textColor="@color/PaleBlue"
+        android:textSize="20dp"
+        android:textStyle="italic|bold" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:paddingLeft="10dp"
+        android:text="@string/kategori"
+        android:textAlignment="textStart"
+        android:textColor="@color/PaleBlue"
+        android:textSize="20dp"
+        android:textStyle="italic|bold" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup_pg2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2" >
+
+        <RadioButton
+            android:id="@+id/radio1_pg2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/radio0" />
+
+        <RadioButton
+            android:id="@+id/radio2_pg2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio1" />
+
+        <RadioButton
+            android:id="@+id/radio3_pg2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio2" />
+
+        <RadioButton
+            android:id="@+id/radio4_pg2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio3" />
+
+        <RadioButton
+            android:id="@+id/radio5_pg2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio4" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:paddingLeft="10dp"
+        android:text="@string/infout"
+        android:textAlignment="textStart"
+        android:textColor="@color/PaleBlue"
+        android:textSize="20dp"
+        android:textStyle="italic|bold" />
+    <!-- android:id="@id/fill_title_pg2" -->
+
+    <EditText
+        android:id="@+id/fill_title_pg2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:ems="10"
+        android:text="@string/titel" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/fill_price_pg2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:ems="10"
+        android:text="@string/price" >
+
+        <requestFocus />
+    </EditText>
+
+    <!-- Intent i koden -->
+
+    <Button
+        android:id="@+id/ok_pg2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:text="@string/ok" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:text="@string/clearExp" />
+
+    <ImageView
+        android:id="@+id/camera"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2" />
+
+    <Button
+        android:id="@+id/camera_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/camera" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2" >
+
+        <Button
+            android:id="@+id/income_pg2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/inkomster" />
+
+        <Button
+            android:id="@+id/start_pg2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/start" />
+
+        <Button
+            android:id="@+id/result_pg2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/resultat" />
+    </LinearLayout>
+
+</LinearLayout>

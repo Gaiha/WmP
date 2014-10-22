@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">WheresMyPennies</string>
+
+    <!-- pg1 -->
+    <string name="action_settings">Settings</string>
+    <string name="welcome">Hej och välkommen till WheresMyPennies!
+Vänligen ange ditt namn</string>
+    <string name="budget">Hur mycket pengar vill du spara och inom vilken tidsperiod?</string>
+    <string name="ok">Ok</string>
+    <string name="från">Från</string>
+    <string name="till">Till</string>
+    <string name="hej">Hej</string>
+
+
+    <!-- pg2 -->
+    <string name="utgifter">Utgifter</string>
+    <string name="kategori">Välj kategori</string>
+    <string name="infout">Information om utgift</string>
+    <string name="radio0">Hyra</string>
+    <string name="radio1">Räkningar</string>
+    <string name="radio2">Mat</string>
+    <string name="radio3">Resor</string>
+    <string name="radio4">Nöje</string>
+    <string name="start">Start</string>
+    <string name="totEx">Dina totala utgifter</string>
+    <string name="pic">Ta en bild</string>
+    <string name="clearExp">Ta bort alla utgifter</string>
+
+    <!-- pg3 -->
+    <string name="inkomster">Inkomster</string>
+    <string name="infoin_pg3">Information om inkomst</string>
+    <string name="radio11_pg3">Lön</string>
+    <string name="radio12_pg3">Csn</string>
+    <string name="category">Kategori</string>
+    <string name="titel">Titel</string>
+    <string name="price">Pris</string>
+    <string name="clear">Ta bort alla inkomster</string>
+    <string name="totInc">Din totala inkomst</string>
+    <string name="planBud">Du har planerat att spara</string>
+
+    <!-- pg4 -->
+    <string name="resultat">Resultat</string>
+    <string name="text5">Resultat</string>
+
+
+
+
+
+
+
+</resources>

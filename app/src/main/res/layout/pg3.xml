@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bkgr"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:paddingLeft="10dp"
+        android:text="@string/inkomster"
+        android:textAlignment="textStart"
+        android:textColor="@color/PaleBlue"
+        android:textSize="20dp"
+        android:textStyle="italic|bold" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:paddingLeft="10dp"
+        android:text="@string/kategori"
+        android:textAlignment="textStart"
+        android:textColor="@color/PaleBlue"
+        android:textSize="20dp"
+        android:textStyle="italic|bold" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup_pg3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" >
+
+        <RadioButton
+            android:id="@+id/radio1_pg3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/radio11_pg3" />
+
+        <RadioButton
+            android:id="@+id/radio2_pg3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio12_pg3" />
+
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:paddingLeft="10dp"
+        android:text="@string/infoin_pg3"
+        android:textAlignment="textStart"
+        android:textColor="@color/PaleBlue"
+        android:textSize="20dp"
+        android:textStyle="italic|bold" />
+
+    <EditText
+        android:id="@+id/fill_namepg3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:text="@string/titel"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+
+    <EditText
+        android:id="@+id/eprice_pg3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:text="@string/price"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+
+
+    <!-- Intent i koden -->
+
+    <Button
+        android:id="@+id/confirm_pg3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:text="@string/ok" />
+
+    <Button
+        android:id="@+id/buttonC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:text="@string/clear" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2" >
+
+        <Button
+            android:id="@+id/start_pg3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/start" />
+
+        <Button
+            android:id="@+id/outgoings_pg3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/utgifter" />
+
+        <Button
+            android:id="@+id/result_pg3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/resultat" />
+
+    </LinearLayout>
+
+</LinearLayout>
