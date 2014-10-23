@@ -6,13 +6,18 @@ package com.example.frida.wmp; /**
         import java.io.File;
         import java.io.FileInputStream;
         import java.io.FileNotFoundException;
+        import java.io.IOException;
         import java.util.List;
         import android.app.Activity;
         import android.content.SharedPreferences;
         import android.graphics.Bitmap;
         import android.graphics.BitmapFactory;
+        import android.graphics.drawable.BitmapDrawable;
+        import android.graphics.drawable.Drawable;
+        import android.media.ExifInterface;
         import android.net.Uri;
         import android.preference.PreferenceManager;
+        import android.provider.MediaStore;
         import android.util.Base64;
         import android.util.Log;
         import android.view.LayoutInflater;
@@ -71,18 +76,27 @@ public class ExpensesAdapter extends BaseAdapter {
         Acategory.setText(exp.getCategory());
         Atitle.setText(exp.getTitle());
 
-        Aimage.setImageBitmap(BitmapFactory.decodeFile(exp.getImage()));
-        //Aimage.setImageBitmap(StringToBitMap(exp.getImage()));
-        //stringToBitmap("filelocation"));
-        //sharedpreferences get all Aimageset image konvertera sträng
+        ExifInterface exif = null;
+        try {
+            exif = new ExifInterface(exp.getImage());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        byte[] imageData=exif.getThumbnail();
+        Bitmap  thumbnail= BitmapFactory.decodeByteArray(imageData,0,imageData.length);
 
+//        Bitmap bitmap = BitmapFactory.decodeFile(exp.getImage());
+//        bitmap = Bitmap.createScaledBitmap(bitmap,60, 60, true);
+//        Drawable d=loadImagefromurl(bitmap);
+        Aimage.setImageBitmap(thumbnail);
 
-        // if(exp.getImage() != null){
-
-        // Aimage.setImageBitmap(stringToBitmap(exp.getImage()));
-        //System.out.println(exp.getImage());
-        // System.out.println("BILD FINNS!!!!!!!!!!!!!!!!");
         return view;
+    }
+
+    public Drawable loadImagefromurl(Bitmap icon)
+    {
+        Drawable d=new BitmapDrawable(icon);
+        return d;
     }
 
 //		if (str != null && !str.matches("")) {

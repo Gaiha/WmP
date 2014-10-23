@@ -34,7 +34,7 @@ import android.widget.Toast;
 
 //Kategori f�ltet i formul�ret ska fyllas i av bulletpoint val
 public class FragmentPG2 extends Fragment {
-    private static final int CAM_REQUEST_CODE = 1001;
+    private static final int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 100;
     private RadioGroup fillCategory;
     private RadioButton radio1Btn;
     private EditText fillTitle;
@@ -149,49 +149,33 @@ public class FragmentPG2 extends Fragment {
 
                 } else if (v.getId() == R.id.camera_button) {
 
-                    Intent getPhoto = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                    fileUri = getOutputMediaFileUri(MEDIA_TYPE_IMAGE);
+//                    Intent getPhoto = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+//                    fileUri = getOutputMediaFileUri(MEDIA_TYPE_IMAGE);
+//                    SharedPreferences.Editor editor = sharedPreferences.edit();
+//                    editor.putString("filelocation", fileUri.getPath());
+//                    editor.commit();
+//
+//                    getPhoto.putExtra(MediaStore.EXTRA_OUTPUT, fileUri);
+//
+//                    startActivityForResult(getPhoto, CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE);
+
+                    Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+
+                    fileUri = getOutputMediaFileUri(MEDIA_TYPE_IMAGE); // create a file to save the image
+
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.putString("filelocation", fileUri.getPath());
                     editor.commit();
 
+                    intent.putExtra(MediaStore.EXTRA_OUTPUT, fileUri); // set the image file name
 
-
-                    startActivityForResult(getPhoto, 1001);
-
-
-
-                    //if (imgName != "") {
-
-
-                        //UTGIFTER LÄGGS INTE IN LÄNGRE ENDAST LÄNKEN TILL IMGNAME LAGRAS
-
-                        //Toast.makeText(
-                             //   getActivity(),
-                             //   Integer.toString(DatabaseController.getExpense()
-                                   //     .getPrice()), Toast.LENGTH_SHORT).show();
-                      //  System.out.println(imgName);
-
-                        //kolla så imgName får ett värde. Lagras strängen i databasen?
-
-                   // }
-
+                    // start the image capture Intent
+                    startActivityForResult(intent, CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE);
 
                 }
-
-
             }
-
-
-
-
-
             }
         }
-
-
-
-
 
     /** Create a file Uri for saving an image or video */
     private static Uri getOutputMediaFileUri(int type){
@@ -231,23 +215,6 @@ public class FragmentPG2 extends Fragment {
 
         return mediaFile;
     }
-
-    public void saveToDatabase() {
-
-
-    }
-    public void getPicInfo(int requestCode, int resultCode, Intent data){
-        if(requestCode == CAM_REQUEST_CODE){ //kollar så det är från kameran jag får resultat
-            if(resultCode == MEDIA_TYPE_IMAGE){ //kollar så att jag fått data
-
-                fileUri = getOutputMediaFileUri(MEDIA_TYPE_VIDEO);  // create a file to save the video
-                data.putExtra(MediaStore.EXTRA_OUTPUT, fileUri);  // set the image file name
-                Uri image = data.getData();//Hämtar datan och lägger det i ett Uri objekt
-               // imgName = image.getPath(); //lagrar sökväg till bilden i en sträng
-            }
-        }
-    }
-
 
 
 }

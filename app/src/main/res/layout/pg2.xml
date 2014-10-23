@@ -84,8 +84,9 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_weight="2"
+        android:inputType="text"
         android:ems="10"
-        android:text="@string/titel" >
+        android:hint="@string/titel" >
 
         <requestFocus />
     </EditText>
@@ -95,8 +96,9 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_weight="2"
+        android:inputType="number"
         android:ems="10"
-        android:text="@string/price" >
+        android:hint="@string/price" >
 
         <requestFocus />
     </EditText>

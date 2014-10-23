@@ -114,7 +114,7 @@ public class FragmentPG4 extends Fragment {
         }
 
         Log.i("PG4 - onActivityCreated",(infoExp==null)?"null":infoExp.toString());
-        Expense exp = new Expense(null, 0, null, null); //
+       // Expense exp = new Expense(null, 0, null, null); //
         //(title, price, category, BitMapToString(picture));// price
         //image = null;
         infoExp.setAdapter(expAdapter);
@@ -129,12 +129,12 @@ public class FragmentPG4 extends Fragment {
         totInc.setText(String.valueOf(DatabaseController.calcIncome()));
         totRes.setText(String.valueOf(DatabaseController.calcIncome()
                 - (DatabaseController.calcExpense())));
-        firstN.setText(String.valueOf(DatabaseController.getUser()
-                .getFirstName()));
-        lastN.setText(String
-                .valueOf(DatabaseController.getUser().getLastName()));
-        Log.i("pg4", "totexp: " + totExp.getText().toString() + " totInc: "
-                + totInc.getText().toString());
+//        firstN.setText(String.valueOf(DatabaseController.getUser()
+//                .getFirstName()));
+//        lastN.setText(String
+//                .valueOf(DatabaseController.getUser().getLastName()));
+//        Log.i("pg4", "totexp: " + totExp.getText().toString() + " totInc: "
+//                + totInc.getText().toString());
 
     }
 
